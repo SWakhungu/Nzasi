@@ -11,6 +11,16 @@ Initial focus: ISO 7101:2023 for healthcare.
 
 ## Pages
 - Home
+### Home Page - Hero Section
+
+**Acceptance Criteria**
+- Displays company name/logo clearly.
+- Tagline: “Governance, Risk & Compliance for Healthcare”.
+- Call-to-action (CTA) button: “Explore Our Solution”.
+- Background uses brand gradient (dark blue → azure).
+- Fully responsive (looks good on desktop and mobile).
+- Loads in <1.5s on standard broadband.
+
 - About Us
 - Our Solution (AfyaNumeriq + roadmap)
 - Partnership
