@@ -36,7 +36,7 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">About Us</h2>
           <p className="text-lg mb-6">
-            Nzasi Ventures Limited is a Kenyan company building{" "}
+            Nzasi Ventures Limited is a Nairobi-based company building{" "}
             <span className="font-semibold">AfyaNumeriq</span>, a Governance,
             Risk, and Compliance (GRC) platform designed for healthcare
             organizations.
