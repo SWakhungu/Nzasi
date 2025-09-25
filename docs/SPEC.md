@@ -21,6 +21,21 @@ Initial focus: ISO 7101:2023 for healthcare.
 - Fully responsive (looks good on desktop and mobile).
 - Loads in <1.5s on standard broadband.
 
+### Navigation Bar (Navbar)
+
+**Purpose**
+- Provide top-level navigation for the brochure site: About | Solution | Partnership | Resources | Contact
+
+**Acceptance Criteria**
+- A sticky header at the top of the page (remains visible on scroll).
+- Uses brand background color `#1f3a60` (dark blue) and white text.
+- Desktop: Links shown inline (About, Solution, Partnership, Resources, Contact).
+- Mobile: Hamburger menu that toggles the links (links stacked vertically).
+- Accessible: hamburger button uses `aria-expanded`, has an accessible label.
+- Layout: Page content should be pushed down so header does not overlap content (e.g., `padding-top` to compensate for header height).
+- Fully responsive across common breakpoints; no layout or overflow issues on mobile.
+
+
 - About Us
 - Our Solution (AfyaNumeriq + roadmap)
 - Partnership
