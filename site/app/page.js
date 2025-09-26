@@ -8,14 +8,12 @@ export default function Home() {
           backgroundImage: "url('/hero-bg.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        {/* Dark overlay for readability */}
-        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         {/* Hero content */}
-        <div className="relative z-10 px-6">
-          <h1 className="text-4xl md:text-5xl font-bold mb-6">
+          <h1 className="relative z-10 text-4xl md:text-5xl font-bold mb-6">
             Nzasi Ventures
           </h1>
 
