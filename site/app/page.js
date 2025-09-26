@@ -5,8 +5,7 @@ export default function Home() {
       <section
         className="relative min-h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center"
         style={{
-        backgroundImage: "url('/hero-bg.jpg')",
-        backgroundRepeat: "no-repeat",
+          backgroundImage: "url('/hero-bg.jpg')",
         }}
       >
         {/* Dark overlay for readability */}
