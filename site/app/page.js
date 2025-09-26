@@ -2,7 +2,13 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section className="relative min-h-screen flex flex-col items-center justify-center text-center text-white hero-bg">
+      <section
+        className="relative min-h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center"
+        //style={{
+        //backgroundImage: "url('/hero-bg.jpg')",
+        //backgroundRepeat: "no-repeat",
+        //}}
+      >
         {/* Dark overlay for readability */}
         <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
