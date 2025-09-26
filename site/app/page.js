@@ -3,9 +3,11 @@ export default function Home() {
     <main className="min-h-screen flex flex-col">
       {/* Hero Section */}
       <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center text-white bg-cover bg-center"
+        className="relative min-h-screen flex flex-col items-center justify-center text-center text-white"
         style={{
           backgroundImage: "url('/hero-bg.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
       >
         {/* Dark overlay for readability */}
