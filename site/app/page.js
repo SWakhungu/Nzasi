@@ -2,18 +2,13 @@ export default function Home() {
   return (
     <main className="min-h-screen flex flex-col">
       {/* Hero Section */}
-      <section
-        className="relative min-h-screen flex flex-col items-center justify-center text-center text-white"
-        style={{
-          backgroundImage: "url('/hero-bg.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="relative min-h-screen flex flex-col items-center justify-center text-center text-white hero-bg">
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black bg-opacity-40"></div>
 
         {/* Hero content */}
-          <h1 className="relative z-10 text-4xl md:text-5xl font-bold mb-6">
+        <div className="relative z-10 px-6">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">
             Nzasi Ventures
           </h1>
 
