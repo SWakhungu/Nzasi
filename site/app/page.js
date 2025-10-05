@@ -47,7 +47,9 @@ export default function Home() {
             services.
           </p>
           <ul className="text-left space-y-2 max-w-xl mx-auto list-disc list-inside">
-            <li>Focused on ISO 7101:2023 (healthcare management systems)</li>
+            <li>
+              Focused on ISO 7101:2023 (healthcare quality management systems)
+            </li>
             <li>
               Built to scale to ISO 15189, ISO/IEC 27001, ISO 42001, ISO 13485,
               ISO/IEC 17025
