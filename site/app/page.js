@@ -203,7 +203,7 @@ export default function Home() {
                 href="mailto:info@nzasi.com"
                 className="underline hover:text-[#f7cf59]"
               >
-                info@nzasi.co.ke
+                info@nzasi.com
               </a>
             </p>
             <p>Phone: +254 781 704 966</p>

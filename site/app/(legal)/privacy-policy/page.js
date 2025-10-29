@@ -1,0 +1,42 @@
+export default function PrivacyPolicy() {
+  return (
+    <main className="min-h-screen p-10 max-w-3xl mx-auto text-[#d2e0f4]">
+      <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
+      <p className="mb-4">
+        Nzasi Ventures Limited (“we”, “our”, “us”) respects your privacy. This
+        Privacy Policy describes how we collect, use, and protect your personal
+        information when you interact with our website or services.
+      </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-2">
+        1. Information We Collect
+      </h2>
+      <p className="mb-4">
+        We may collect your name, email address, phone number, and organization
+        details when you contact us or request information.
+      </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-2">
+        2. How We Use Your Information
+      </h2>
+      <ul className="list-disc list-inside mb-4 space-y-2">
+        <li>To respond to your inquiries and provide support</li>
+        <li>To send relevant updates or company information</li>
+        <li>To improve our services and website</li>
+      </ul>
+      <h2 className="text-2xl font-semibold mt-8 mb-2">3. Data Protection</h2>
+      <p className="mb-4">
+        We implement appropriate security measures to safeguard your data
+        against unauthorized access, disclosure, alteration, or destruction.
+      </p>
+      <h2 className="text-2xl font-semibold mt-8 mb-2">4. Your Rights</h2>
+      <p className="mb-4">
+        You may request access, correction, or deletion of your personal data by
+        contacting us at{" "}
+        <a href="mailto:info@nzasi.com" className="underline text-[#3582b8]">
+          info@nzasi.com
+        </a>
+        .
+      </p>
+      <p className="mt-8 text-sm text-gray-600">Last updated: October 2025</p>
+    </main>
+  );
+}
