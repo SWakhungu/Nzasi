@@ -167,7 +167,7 @@ export default function Home() {
               Egis Management Systems Limited
             </a>{" "}
             to provide training and consultancy resources that support ISO
-            adoption in healthcare.
+            standards adoption in healthcare.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
             <div className="p-6 border rounded-lg shadow hover:shadow-md transition text-left">
@@ -180,8 +180,8 @@ export default function Home() {
             <div className="p-6 border rounded-lg shadow hover:shadow-md transition text-left">
               <h3 className="font-semibold mb-2">Consultancy Support</h3>
               <p className="text-sm">
-                Work with Egis experts to streamline your ISO implementation
-                journey.
+                Work with Egis experts to streamline your ISO standards
+                implementation journey.
               </p>
             </div>
           </div>
@@ -200,7 +200,7 @@ export default function Home() {
             <p>
               Email:{" "}
               <a
-                href="mailto:info@nzasi.co.ke"
+                href="mailto:info@nzasi.com"
                 className="underline hover:text-[#f7cf59]"
               >
                 info@nzasi.co.ke
