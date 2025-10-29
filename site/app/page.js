@@ -210,7 +210,7 @@ export default function Home() {
           </div>
           <div className="mt-10">
             <a
-              href="mailto:info@nzasi.co.ke"
+              href="mailto:info@nzasi.com"
               className="px-6 py-3 bg-[#f7cf59] text-[#1f3a60] font-semibold rounded-2xl shadow hover:bg-yellow-400 transition"
             >
               Send Email
