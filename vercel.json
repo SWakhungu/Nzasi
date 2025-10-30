@@ -1,15 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "site/package.json",
-      "use": "@vercel/next"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "site/$1"
-    }
-  ]
+  "framework": "nextjs",
+  "rootDirectory": "site",
+  "buildCommand": "npm run build"
 }
