@@ -3,14 +3,24 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+
+  // Handle navigation for both main and subpages
+  const handleNavigation = (section) => {
+    setMenuOpen(false); // close mobile menu if open
+
+    // Always navigate to home, then scroll to section
+    router.push(`/#${section}`);
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full bg-[#1f3a60] bg-opacity-90 text-white shadow z-50 backdrop-blur-md">
       <div className="max-w-6xl mx-auto px-6 flex items-center justify-between h-20">
-        {/* Logo only */}
+        {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/logo.png"
@@ -23,21 +33,17 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <div className="hidden md:flex space-x-6">
-          <a href="#about" className="hover:text-[#f7cf59] transition">
-            About
-          </a>
-          <a href="#solution" className="hover:text-[#f7cf59] transition">
-            Solution
-          </a>
-          <a href="#partnership" className="hover:text-[#f7cf59] transition">
-            Partnership
-          </a>
-          <a href="#resources" className="hover:text-[#f7cf59] transition">
-            Resources
-          </a>
-          <a href="#contact" className="hover:text-[#f7cf59] transition">
-            Contact
-          </a>
+          {["about", "solution", "partnership", "resources", "contact"].map(
+            (section) => (
+              <button
+                key={section}
+                onClick={() => handleNavigation(section)}
+                className="hover:text-[#f7cf59] transition capitalize"
+              >
+                {section}
+              </button>
+            )
+          )}
         </div>
 
         {/* Mobile Hamburger */}
@@ -45,7 +51,6 @@ export default function Navbar() {
           className="md:hidden focus:outline-none"
           onClick={() => setMenuOpen(!menuOpen)}
         >
-          {/* Hamburger icon */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             className="h-8 w-8"
@@ -54,7 +59,6 @@ export default function Navbar() {
             stroke="currentColor"
           >
             {menuOpen ? (
-              // Close (X)
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -62,7 +66,6 @@ export default function Navbar() {
                 d="M6 18L18 6M6 6l12 12"
               />
             ) : (
-              // Hamburger (3 lines)
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
@@ -74,7 +77,7 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown with Frosted Glass Effect */}
+      {/* Mobile Menu */}
       <div
         className={`md:hidden transform transition-all duration-300 ease-in-out origin-top ${
           menuOpen
@@ -83,41 +86,17 @@ export default function Navbar() {
         } overflow-hidden bg-[#2a4b7c]/70 backdrop-blur-md`}
       >
         <div className="px-6 py-4 space-y-4">
-          <a
-            href="#about"
-            className="block hover:text-[#f7cf59] transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            About
-          </a>
-          <a
-            href="#solution"
-            className="block hover:text-[#f7cf59] transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            Solution
-          </a>
-          <a
-            href="#partnership"
-            className="block hover:text-[#f7cf59] transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            Partnership
-          </a>
-          <a
-            href="#resources"
-            className="block hover:text-[#f7cf59] transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            Resources
-          </a>
-          <a
-            href="#contact"
-            className="block hover:text-[#f7cf59] transition"
-            onClick={() => setMenuOpen(false)}
-          >
-            Contact
-          </a>
+          {["about", "solution", "partnership", "resources", "contact"].map(
+            (section) => (
+              <button
+                key={section}
+                onClick={() => handleNavigation(section)}
+                className="block w-full text-left hover:text-[#f7cf59] transition capitalize"
+              >
+                {section}
+              </button>
+            )
+          )}
         </div>
       </div>
     </nav>
