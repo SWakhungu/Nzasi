@@ -43,7 +43,7 @@ export default function Home() {
           </p>
           <p className="text-lg mb-6">
             Our mission is to empower healthcare service providers by
-            simplifying ISO compliance and enabling safer, more reliable
+            simplifying ISO standards compliance and enabling safer, more reliable
             services.
           </p>
           <ul className="text-left space-y-2 max-w-xl mx-auto list-disc list-inside">
@@ -84,7 +84,7 @@ export default function Home() {
             <li>ISO/IEC 27001:2022 — Information security management</li>
             <li>ISO 42001:2023 — AI management system</li>
             <li>ISO 13485:2016 — Medical devices QMS</li>
-            <li>ISO/IEC 17025:2017 — Testing and calibration labs</li>
+            <li>ISO/IEC 17025:2017 — Testing and calibration labs competency</li>
           </ul>
 
           <div className="mt-8">
