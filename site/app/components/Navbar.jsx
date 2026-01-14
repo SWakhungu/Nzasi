@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import DemoRequestModal from "./DemoRequestModal";
-import { ArrowRightStartOnRectangleIcon } from "@heroicons/react/24/outline";
+
 
 export default function Navbar({ onRequestDemo }) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -54,7 +54,7 @@ export default function Navbar({ onRequestDemo }) {
             href="https://afyanumeriq.com/login"
             className="flex items-center gap-1 text-[#f7cf59] hover:opacity-80 transition"
           >
-            <ArrowRightStartOnRectangleIcon className="h-5 w-5 inline mr-1" /> AfyaNumeriq Log In
+          AfyaNumeriq Log In
           </a>
 
           <button
