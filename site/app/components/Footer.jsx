@@ -50,7 +50,7 @@ export default function Footer() {
 
       {/* Bottom Bar */}
       <div className="border-t border-gray-600 mt-10 pt-4 text-center text-sm text-gray-400">
-        © {year} Nzasi Ventures Limited by Steve Wakhungu. All rights reserved.
+        © {year} Nzasi Ventures Limited. All rights reserved.
       </div>
     </footer>
   );
