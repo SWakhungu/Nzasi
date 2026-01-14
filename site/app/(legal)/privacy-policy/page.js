@@ -3,7 +3,8 @@ export default function PrivacyPolicy() {
     <main className="min-h-screen p-10 max-w-3xl mx-auto text-[#d2e0f4]">
       <h1 className="text-3xl font-bold mb-6">Privacy Policy</h1>
       <p className="mb-4">
-        Nzasi Ventures Limited (“we”, “our”, “us”) respects your privacy. This
+        Nzasi Ventures Limited (&ldquo;we&rdquo;, &ldquo;our&rdquo;,
+        &ldquo;us&rdquo;) respects your privacy. This
         Privacy Policy describes how we collect, use, and protect your personal
         information when you interact with our website or services.
       </p>
@@ -19,8 +20,8 @@ export default function PrivacyPolicy() {
         We retain personal data only as long as necessary for the purpose collected, to meet contractual or legal obligations, or to resolve disputes. Typical retention windows:
       </p>  
         <ul className="list-disc list-inside mb-4 space-y-2">
-          <li>Account & billing data: retention for the duration of the contract + 7 years for accounting/legal compliance.</li>
-          <li>Audit logs & backups: retention according to the organization’s policy (configurable) or minimum legal requirements.</li>
+          <li>Account &amp; billing data: retention for the duration of the contract + 7 years for accounting/legal compliance.</li>
+          <li>Audit logs &amp; backups: retention according to the organization&rsquo;s policy (configurable) or minimum legal requirements.</li>
           <li>Website analytics and cookies: per the cookie banner preferences.</li>
         </ul>
       <p className="mb-4">  
@@ -33,7 +34,7 @@ export default function PrivacyPolicy() {
         <li>To respond to your inquiries and provide support</li>
         <li>To send relevant updates or company information</li>
         <li>To improve our services and website</li>
-        <li>To monitor the platform's security in line with regulatory and legal requirements.</li>
+        <li>To monitor the platform&apos;s security in line with regulatory and legal requirements.</li>
       </ul>
       <h2 className="text-2xl font-semibold mt-8 mb-2">3. Data Protection</h2>
       <p className="mb-4">
