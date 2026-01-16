@@ -208,7 +208,7 @@ export default function Home() {
                 Egis Management Systems Limited
               </a>{" "}
               to provide training and consultancy resources that support ISO
-              standards adoption in healthcare.
+              standards adoption in healthcare and beyond.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
               <div className="p-6 border rounded-lg shadow hover:shadow-md transition text-left">

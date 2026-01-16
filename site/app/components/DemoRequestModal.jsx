@@ -1,21 +1,57 @@
 "use client";
 
+import { useState } from "react";
+
 export default function DemoRequestModal({ onClose, onSubmitted }) {
-  const handleSubmit = (e) => {
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+    setSubmitting(true);
 
-    const formData = new FormData(e.target);
-    const body = Array.from(formData.entries())
-      .map(([key, value]) => `${key}: ${value}`)
-      .join("\n");
+    try {
+      const formData = new FormData(e.target);
 
-    window.location.href = `mailto:info@nzasi.com?subject=AfyaNumeriq Demo Request&body=${encodeURIComponent(
-      body
-    )}`;
+      // Convert FormData to a plain object (handles checkboxes cleanly)
+      const payload = {};
+      for (const [key, value] of formData.entries()) {
+        if (payload[key] === undefined) payload[key] = value;
+        else if (Array.isArray(payload[key])) payload[key].push(value);
+        else payload[key] = [payload[key], value];
+      }
 
-    if (onSubmitted) onSubmitted();
+      // Convert checked ISO checkboxes into a nice list
+      const interests = [];
+      ["ISO 7101", "ISO 15189", "ISO 27001", "ISO 17025", "ISO 42001", "Other"].forEach(
+        (k) => {
+          if (payload[k] === "on") interests.push(k);
+          delete payload[k];
+        }
+      );
+      payload["Interests"] = interests;
+
+      const res = await fetch("/api/demo-request", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json().catch(() => ({}));
+
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to submit demo request.");
+      }
+
+      if (onSubmitted) onSubmitted();
+    } catch (err) {
+      setError(err?.message || "Something went wrong. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
-
+  
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
       <div className="bg-white rounded-xl shadow-2xl w-full max-w-2xl overflow-hidden">
