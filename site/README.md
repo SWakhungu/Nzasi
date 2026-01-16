@@ -1,104 +1,123 @@
 # 🌐 Nzasi Ventures Website
 
-**Nzasi Ventures Limited** is a Nairobi-based company building **AfyaNumeriq**, a Governance, Risk, and Compliance (GRC) platform designed for healthcare organizations.
+**Nzasi Ventures Limited** is a Nairobi-based company building **AfyaNumeriq**, a Governance, Risk, and Compliance (GRC) platform designed primarily for healthcare organizations.
 
 This repository contains the source code for the official **Nzasi Ventures website**, built using **Next.js 15** and **Tailwind CSS**.
 
 ---
 
-## 🚀 Deployment Status
+## 🚀 Live Deployment
 
-- ✅ **Live MVP:** [https://nzasi.com](https://nzasi.com)
-- 🌍 **Vercel alias:** [https://nzasi.vercel.app](https://nzasi.vercel.app)
+- 🌍 **Primary domain:** https://nzasi.com
+- 🔁 **Vercel alias:** https://nzasi.vercel.app
 - 🧾 **Deployment checklist:** [DEPLOYMENT_CHECKLIST.md](./DEPLOYMENT_CHECKLIST.md)
 
-> **Note:** The MVP site is stable and live.  
-> The **hero background image (`hero-bg.jpg`) does not render both locally and on production**, even though it exists in `/public`.  
-> Debugging this will be the next technical priority.
+The site is live, stable, and serving as the public-facing entry point for **AfyaNumeriq GRC**.
 
 ---
 
-## 📂 Project Structure
+## ✨ Key Features
 
-app/
-├── components/
-│ ├── Navbar.jsx
-│ └── Footer.jsx
-├── (legal)/
-│ ├── privacy-policy/page.js
-│ ├── terms-of-use/page.js
-│ └── cookie-notice/page.js
-├── contact/page.js
-├── layout.js
-└── page.js
-public/
-├── hero-bg.jpg
-├── logo.png
-├── favicon.ico
-└── favicon.png
-README.md
-DEPLOYMENT_CHECKLIST.md
+- Fully responsive marketing website
+- Clear product positioning for AfyaNumeriq
+- Legal pages (Privacy Policy, Terms of Use)
+- **Server-side demo request flow**
+  - Secure API route
+  - Email delivery via Resend
+  - Thank-you confirmation modal
+  - No client email dependency
+
+---
+
+## 📂 Project Structure (Relevant)
+
+.
+├── docs
+│   └── SPEC.md
+├── netlify.toml
+├── README.md
+├── site
+│   ├── app
+│   ├── DEPLOYMENT_CHECKLIST.md
+│   ├── eslint.config.mjs
+│   ├── jsconfig.json
+│   ├── next.config.mjs
+│   ├── node_modules
+│   ├── package.json
+│   ├── package-lock.json
+│   ├── postcss.config.mjs
+│   ├── public
+│   └── README.md
+└── vercel.json
+
 
 ---
 
 ## 🛠 Tech Stack
 
-- ⚛️ **Next.js 15**
-- 🎨 **Tailwind CSS 4**
-- ☁️ **Vercel** for continuous deployment
-- 📧 **Formspree** (planned) for contact form integration
+- ⚛️ **Next.js 15 (App Router)**
+- 🎨 **Tailwind CSS**
+- ☁️ **Vercel** (CI/CD + Serverless)
+- 📧 **Resend** (transactional email delivery)
 
 ---
 
-## ✅ Completed Features
+## 🔐 Environment Variables
 
-- Responsive **navbar** and **footer**
-- Fully functional homepage with **mission** and **solution** sections
-- Legal pages: **Privacy Policy**, **Terms of Use**, and **Cookie Notice**
-- Custom domain connection: **nzasi.com**
-- Favicon and logo integrated properly
+Managed via **Vercel Project Settings** (not committed to git):
 
----
+- `RESEND_API_KEY`
+- `DEMO_FROM_EMAIL`
 
-## 🔧 Known Issues / Next Steps
-
-- 🖼 **Hero background image not rendering** (both locally and on production)
-- 🧩 Add contact form integration via Formspree
-- 📊 Add analytics (Google Analytics or Plausible)
-- 🧾 Refine legal page text and add footer links dynamically
-- 🔒 Conduct content and compliance review before scale-up
+These are required for the demo request API to function in production.
 
 ---
 
-## 📌 Future Enhancements
+## 🧪 Verified Production API
 
-- 🔐 **Login portal** for AfyaNumeriq users
-- 📰 **Newsletter subscription** integration
-- ⚙️ **SEO optimization** (meta + OG tags)
-- 🌍 **Internationalization**:
-  - Phase 1: English 🇬🇧 + French 🇫🇷
-  - Phase 2: Add Spanish 🇪🇸
+```bash
+POST /api/demo-request
+Accepts JSON demo requests
 
----
+Performs server-side validation
 
-## 📬 Contact
+Sends email to info@nzasi.com
 
-- ✉️ Email: [info@nzasi.com](mailto:info@nzasi.com)
-- ☎️ Phone: +254 781 704 966
-- 🌐 Partner: [Egis Management Systems](https://www.egis.africa)
+Returns { "ok": true } on success
 
----
+📌 Roadmap / Next Steps
 
-## 🧭 Maintainer Notes
+Persist demo requests in a database
 
-- Development path: `~/Development/code/Nzasi/site`
-- Deployment: [Vercel CLI + GitHub integration](https://vercel.com)
-- Branch: `main`
-- Node: `>=18.x`
-- Run locally: `npm run dev`
-- Auto-deploy: on push to `main`
+Auto-reply confirmation emails to users
 
----
+Add analytics and SEO enhancements
 
-_Last updated: October 2025_  
-_Maintainer: Steve Wakhungu_
+Integrate AfyaNumeriq login portal
+
+Multi-language support (EN / FR)
+
+📬 Contact
+
+✉️ Email: info@nzasi.com
+
+☎️ Phone: +254 781 704 966
+
+🌐 Partner: https://www.egis.africa
+
+🧭 Maintainer Notes
+
+Monorepo root: ~/Development/code/Nzasi
+
+App root: site/
+
+Branch: main
+
+Node: >=18
+
+Local dev: npm run dev
+
+Deployment: automatic on push to main
+
+Last updated: January 2026
+Maintainer: Steve Wakhungu

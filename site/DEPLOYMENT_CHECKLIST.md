@@ -15,8 +15,8 @@ This document tracks the deployment readiness of the Nzasi Ventures website MVP.
 
 ## 2. Website Sections
 
-- [x] Navbar (with logo).
-- [x] Hero Section (background image + overlay).
+- [x] Navbar (responsive, mobile + desktop).
+- [x] Hero Section (headline, CTA buttons).
 - [x] About Us.
 - [x] Solution.
 - [x] Partnership.
@@ -28,51 +28,76 @@ This document tracks the deployment readiness of the Nzasi Ventures website MVP.
 ## 3. Assets
 
 - [x] `logo.png` placed in `/public`.
-- [x] `hero-bg.jpg` placed in `/public`.
+- [x] Dashboard hero image placed in `/public`.
 - [x] Favicon converted (`favicon.ico` + `favicon.png`).
-- [x] Both favicons placed in `/public`.
+- [x] Assets load correctly locally and in production.
 
 ---
 
 ## 4. Metadata & Favicon
 
-- [x] `app/layout.js` updated with title, description, favicon icons.
-- [x] Verified favicon loads locally (`http://localhost:3000`).
-- [x] Verified favicon loads on production (Vercel).
+- [x] `app/layout.js` updated with title and description.
+- [x] Favicon verified locally.
+- [x] Favicon verified on production (Vercel).
 
 ---
 
-## 5. Git Workflow
+## 5. Demo Request Flow (Critical MVP Feature)
 
-- [x] Commit changes with `git add . && git commit -m "..."`.
-- [x] Push to `main`: `git push origin main`.
-- [x] GitHub → Vercel auto-deployment configured.
+- [x] Demo Request modal implemented.
+- [x] Client-side validation working.
+- [x] Server-side API route created (`/api/demo-request`).
+- [x] Email delivery via Resend configured.
+- [x] Environment variables set in Vercel:
+  - `RESEND_API_KEY`
+  - `DEMO_FROM_EMAIL`
+- [x] API tested via `curl` in production (`200 OK`).
+- [x] Thank You modal shown after successful submission.
+- [x] No `mailto:` fallback in production.
+- [x] Requests successfully received at `info@nzasi.com`.
 
 ---
 
-## 6. Vercel Deployment
+## 6. Git Workflow
 
-- [x] Latest deployment passes build checks.
-- [x] Site live at: **[https://nzasi.vercel.app](https://nzasi.vercel.app)**
+- [x] All relevant files tracked by git (including API routes).
+- [x] Changes committed with meaningful messages.
+- [x] Pushed to `main`.
+- [x] GitHub → Vercel auto-deployment confirmed.
 
 ---
 
-## 7. Post-Deployment Testing
+## 7. Vercel Deployment
 
-- [x] Favicon visible in browser tab (test incognito + mobile).
+- [x] Build passes without errors.
+- [x] API routes deployed correctly.
+- [x] Environment variables active in Production.
+- [x] Site live at:
+  - https://nzasi.com
+  - https://www.nzasi.com
+  - https://nzasi.vercel.app
+
+---
+
+## 8. Post-Deployment Testing
+
 - [x] All sections render correctly.
-- [x] Navigation links scroll to correct sections.
+- [x] Navigation links work on desktop and mobile.
+- [x] Demo request works end-to-end in production.
+- [x] Emails delivered successfully.
 
 ---
 
-## 8. Future Enhancements
+## 9. Deferred / Future Enhancements
 
-- [ ] Add footer (Privacy Policy, Terms of Use, Login).
-- [ ] Set up analytics (Google Analytics, Plausible, etc.).
-- [ ] Add contact form (email API or serverless function).
-- [ ] Optimize images (WebP).
-- [ ] Configure custom domain (`nzasi.co.ke`).
+- [ ] Persist demo requests in a database.
+- [ ] Add auto-reply confirmation email to requester.
+- [ ] Add footer links (Privacy Policy, Terms of Use).
+- [ ] Add analytics (Plausible / GA).
+- [ ] Optimize images with `next/image`.
+- [ ] SEO refinements (OG tags, metadata).
+- [ ] AfyaNumeriq login portal integration.
 
 ---
 
-✅ **MVP is now production-ready.**
+✅ **MVP deployment complete and verified in production.**
