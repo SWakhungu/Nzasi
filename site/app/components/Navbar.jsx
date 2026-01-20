@@ -35,7 +35,7 @@ export default function Navbar({ onRequestDemo }) {
 
         {/* CENTER MENU */}
         <div className="hidden md:flex flex-1 justify-center space-x-8">
-          {["about", "solution", "partnership", "resources", "contact"].map(
+          {["about", "solution", "partnership", "resources", "pricing", "contact"].map(
             (section) => (
               <button
                 key={section}

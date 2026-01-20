@@ -229,6 +229,73 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Pricing Section */}
+        <section id="pricing" className="bg-[#0f172a] py-20 px-6">
+          <div className="max-w-7xl mx-auto text-center text-white">
+            <h2 className="text-4xl font-bold mb-4 text-[#f7cf59]">
+              Pricing
+            </h2>
+            <p className="text-lg text-gray-300 mb-12">
+              Tiered subscription pricing, based on organization size and compliance complexity.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {/* Lite */}
+              <div className="bg-[#1f3a60] rounded-xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold mb-2">AfyaNumeriq Lite</h3>
+                <p className="text-[#f7cf59] text-xl font-semibold mb-6">
+                  $3,000 / year
+                </p>
+                <ul className="text-left space-y-3 text-gray-200">
+                  <li>• A single ISO standard</li>
+                  <li>• Asset–Risk–Control workflow</li>
+                  <li>• Risk register & treatments</li>
+                  <li>• Compliance score dashboard</li>
+                  <li>• Manual evidence uploads</li>
+                  <li>• Up to 5 users</li>
+                  <li>• Single site</li>
+                </ul>
+              </div>
+
+              {/* Professional */}
+              <div className="bg-[#3582b8] rounded-xl p-8 shadow-xl scale-105">
+                <h3 className="text-2xl font-bold mb-2">AfyaNumeriq Professional</h3>
+                <p className="text-[#f7cf59] text-xl font-semibold mb-6">
+                  $8,000 / year
+                </p>
+                <ul className="text-left space-y-3 text-white">
+                  <li>• Multiple ISO standards</li>
+                  <li>• Automated SoA generation</li>
+                  <li>• Audit-ready reporting</li>
+                  <li>• Risk ownership tracking</li>
+                  <li>• Evidence traceability</li>
+                  <li>• Compliance trends</li>
+                  <li>• Up to 15 users</li>
+                </ul>
+              </div>
+
+              {/* Enterprise */}
+              <div className="bg-[#1f3a60] rounded-xl p-8 shadow-lg">
+                <h3 className="text-2xl font-bold mb-2">AfyaNumeriq Enterprise</h3>
+                <p className="text-[#f7cf59] text-xl font-semibold mb-6">
+                  $20,000+ / year
+                </p>
+                <ul className="text-left space-y-3 text-gray-200">
+                  <li>• Multi-site & group support</li>
+                  <li>• Custom ISO frameworks</li>
+                  <li>• Advanced audit workflows</li>
+                  <li>• Role-based access controls</li>
+                  <li>• Extended audit logs</li>
+                  <li>• Dedicated onboarding</li>
+                  <li>• SLA & roadmap input</li>
+                </ul>
+              </div>
+              </div>
+            </div>
+          </section>
+        
+
+
         {/* Contact Section */}
         <section id="contact" className="py-20 bg-[#1f3a60] text-white w-full">
           <div className="max-w-4xl mx-auto px-6 text-center">
