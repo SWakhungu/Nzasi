@@ -95,7 +95,7 @@ export default function Navbar({ onRequestDemo }) {
         } overflow-hidden bg-[#2a4b7c]/90 backdrop-blur-md`}
       >
         <div className="px-6 py-4 space-y-4">
-          {["about", "solution", "partnership", "resources", "contact"].map(
+          {["about", "solution", "partnership", "resources", "pricing", "contact"].map(
             (section) => (
               <button
                 key={section}

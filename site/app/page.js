@@ -6,9 +6,56 @@ import ThankYouModal from "./components/ThankYouModal";
 import Navbar from "./components/Navbar";
 import FaqSection from "./components/FaqSection";   
 
+
 export default function Home() {
+  const [activeFramework, setActiveFramework] = useState(null);
   const [showDemoModal, setShowDemoModal] = useState(false);
   const [showThankYouModal, setShowThankYouModal] = useState(false);
+  const frameworks = [
+    {
+      key: "iso7101",
+      label: "ISO 7101",
+      sublabel: "Healthcare QMS",
+      blurb:
+        "AfyaNumeriq structures ISO 7101 requirements into an actionable compliance score. Healthcare teams manage compliance gaps with risk-based treatment plans and audit-ready exports.",
+    },
+    {
+      key: "iso15189",
+      label: "ISO 15189",
+      sublabel: "Medical labs QMS",
+      blurb:
+        "AfyaNumeriq supports laboratory quality workflows by linking patient-centered approach with risk-based thinking. It enables traceable internal audits, corrective actions, and readiness reporting.",
+    },
+    {
+      key: "iso27001",
+      label: "ISO 27001",
+      sublabel: "Information Security",
+      blurb:
+        "AfyaNumeriq maps assets to risks and controls, auto-seeds a Statement of Applicability, and enforces risk ownership and treatment tracking. Evidence and audit logs support audit preparation and continual improvement.",
+    },
+    {
+      key: "iso42001",
+      label: "ISO 42001",
+      sublabel: "AI Management System",
+      blurb:
+        "AfyaNumeriq helps govern AI risks through defined controls, accountability, and evidence requirements across the AI lifecycle. It supports policy alignment, risk assessments, and audit-ready reporting for AI governance.",
+    },
+    {
+      key: "iso13485",
+      label: "ISO 13485",
+      sublabel: "Medical devices QMS",
+      blurb:
+        "AfyaNumeriq supports device-quality compliance by organizing controls, risks, evidence, and audit trails across your QMS. It helps maintain consistency, traceability, and readiness for certification audits.",
+    },
+    {
+      key: "iso17025",
+      label: "ISO 17025",
+      sublabel: "Testing & calibration labs",
+      blurb:
+        "AfyaNumeriq supports competence and quality requirements by tracking controls, evidence, and risk treatments for laboratory processes. It enables structured audits, findings tracking, and continuous improvement reporting.",
+    },
+  ];
+
   return (
     <>
       <Navbar onRequestDemo={() => setShowDemoModal(true)} />
@@ -124,6 +171,75 @@ export default function Home() {
                 ISO/IEC 17025:2017 — Testing and calibration labs competency
               </li>
             </ul>
+            {/* Supported Frameworks */}
+            <div className="mt-10">
+              <p className="text-sm text-[#1f3a60]/70 font-semibold mb-4">
+                Supported compliance frameworks
+              </p>
+
+              <div className="flex flex-wrap justify-center gap-4">
+                {frameworks.map((fw) => {
+                  const isActive = activeFramework === fw.key;
+                  return (
+                    <button
+                      key={fw.key}
+                      type="button"
+                      onClick={() => setActiveFramework(isActive ? null : fw.key)}
+                      className={`group flex flex-col items-center gap-2 focus:outline-none`}
+                      aria-expanded={isActive}
+                      aria-controls={`fw-${fw.key}`}
+                    >
+                      <div
+                        className={`w-16 h-16 rounded-full flex items-center justify-center border-2 shadow-sm transition
+                          ${isActive ? "bg-[#1f3a60] border-[#1f3a60]" : "bg-white border-[#1f3a60]/30 hover:border-[#1f3a60]"}
+                        `}
+                      >
+                        <span
+                          className={`font-bold text-sm transition
+                            ${isActive ? "text-white" : "text-[#1f3a60]"}
+                          `}
+                        >
+                          {fw.label}
+                        </span>
+                      </div>
+
+                      <span className="text-xs text-[#1f3a60]/70">{fw.sublabel}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* Expandable details */}
+              <div className="mt-6 max-w-2xl mx-auto">
+                {frameworks.map((fw) => {
+                  const isActive = activeFramework === fw.key;
+                  return (
+                    <div
+                      key={fw.key}
+                      id={`fw-${fw.key}`}
+                      className={`${isActive ? "block" : "hidden"} bg-white/70 border border-[#1f3a60]/15 rounded-xl p-5 text-left shadow-sm`}
+                    >
+                      <div className="flex items-start justify-between gap-4">
+                        <div>
+                          <h3 className="font-bold text-lg">{fw.label}</h3>
+                          <p className="text-sm text-[#1f3a60]/70">{fw.sublabel}</p>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => setActiveFramework(null)}
+                          className="text-sm text-[#1f3a60] underline hover:opacity-80"
+                        >
+                          Close
+                        </button>
+                      </div>
+                      <p className="mt-3 text-sm leading-relaxed text-[#1f3a60]">
+                        {fw.blurb}
+                      </p>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
 
             <div className="mt-8">
               <a
